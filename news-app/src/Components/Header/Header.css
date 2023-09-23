@@ -50,7 +50,7 @@
     color: #333;
     cursor: pointer;
     font-size:"14.25px";
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .world-news:hover {
@@ -156,6 +156,4 @@
   .login-button {
     padding: 4px 8px; 
   }
-
-
   }

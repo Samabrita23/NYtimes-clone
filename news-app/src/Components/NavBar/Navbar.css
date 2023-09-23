@@ -1,0 +1,93 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    padding-top: 4rem;
+    margin-left:8rem;
+    margin-right: 8rem;
+    text-align: left;
+    font-family: georgia,'times new roman',times,serif;
+  }
+  
+  .navbar-heading {
+    font-size: 44px;
+    font-weight: 900;
+    word-spacing: -0.02em;
+    line-height: 44px;
+    margin-bottom: -6px;
+    margin-top: 6px;
+    padding-bottom: 1.3rem;
+    font-feature-settings: "kern";
+  }
+  
+  .navbar-border {
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 5px;
+  }
+  
+  .navbar-countries {
+    display: flex;
+    justify-content: left;
+    gap: 7px;
+    font-size: 11px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .country-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    border-right: 1.4px solid #e2e2e2;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .country-link:last-child {
+    border-right: none; /* Remove right border for the last link */
+  }
+  
+  .country-link:hover {
+    text-decoration: underline;
+  }
+
+/* For screens with a maximum width of 1024px */
+@media (max-width: 1024px) {
+    .navbar {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+/* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .navbar {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .navbar-heading {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .navbar-countries {
+        font-size: 14px;
+    }
+}
+
+/* For screens with a maximum width of 480px */
+@media (max-width: 480px) {
+    .navbar {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .navbar-heading {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .navbar-countries {
+        font-size: 10px;
+        gap: 2px;
+    }
+}
