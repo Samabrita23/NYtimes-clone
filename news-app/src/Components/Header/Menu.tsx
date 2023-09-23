@@ -1,4 +1,5 @@
 import React from "react";
+import "./Menu.css";
 
 const Menu: React.FC = () => {
   const menuItems1 = [
@@ -30,18 +31,18 @@ const Menu: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-800 text-white p-4">
-      <ul>
+    <div className="menu-container">
+      <ul className="menu-items">
         {menuItems1.map((item, index) => (
-          <li key={index} className="hover:text-gray-400 cursor-pointer">
+          <li key={index} className="menu-item">
             {item}
           </li>
         ))}
       </ul>
-      <div className="border-t border-gray-600 my-4"></div>
-      <ul>
+      <div className="menu-divider"></div>
+      <ul className="menu-items">
         {menuItems2.map((item, index) => (
-          <li key={index} className="hover:text-gray-400 cursor-pointer">
+          <li key={index} className="menu-item">
             {item}
           </li>
         ))}

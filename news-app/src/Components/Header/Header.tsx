@@ -1,55 +1,56 @@
 import React, { useState } from "react";
 import { FaBars, FaSearch } from "react-icons/fa";
-import Logo from "../Assets/Logo.png";
-
-import Menu from "./Menu"; // Import the Menu component
+import NewYorkTimes from "../../Assets/NewYorkTimes.svg";
+import Menu from "./Menu";
+import "./Header.css"; // Import the CSS file
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
- 
-  //to handle side menu
+
+  // To handle side menu
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
+  
 
   const handleSearchClick = () => {
-    //to handle search 
+    // To handle search
   };
 
   return (
-    <div className="bg-white">
-      <nav className="container mx-auto py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
+    <div className="header-container">
+      <div className="header-wrapper">
+        
+        {/* Left Section */}
+        <div className="left-section">
 
-            {/* Hamburger Icon */}
-            <a
-              href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMenuClick();
-              }}
-              className="text-gray-600 hover:text-black cursor-pointer mr-4"
-            >
-              <FaBars />
-            </a>
+          {/* Hamburger Icon */}
+          <FaBars
+            className="hamburger-icon"
+            onClick = {handleMenuClick}
+          />
 
-            {/* Search Icon */}
-            <a
-              href="/"
-              onClick={(e) => {
-                e.preventDefault();
-                handleSearchClick();
-              }}
-              className="text-gray-600 hover:text-black cursor-pointer"
-            >
-              <FaSearch />
-            </a>
-          </div>
+          {/* Search Icon */}
+          <FaSearch
+            className="search-icon"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSearchClick();
+            }}
+          />
+
+          {/* Clickable word "World News" */}
+          <a href="/" className="world-news">
+            World News
+          </a>
+        </div>
+
+        {/* Center Section (Logo) */}
+        <div className="logo">
           <a href="/" className="text-black">
             <img
-              src={Logo}
+              src={NewYorkTimes}
               alt="The New York Times"
               width="250px"
               onClick={() => {
@@ -57,23 +58,22 @@ const Header: React.FC = () => {
               }}
             />
           </a>
-          <div className="ml-auto">
-            {/* Play Spelling Bee Button */}
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-700">
-              Play Spelling Bee
-            </button>
-            {/* Login Button */}
-            <button className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-800">
-              Login
-            </button>
-          </div>
         </div>
-      </nav>
+
+        {/* Right Section */}
+        <div className="right-section">
+          {/* Play Spelling Bee Button */}
+          <button className="play-button">Play Spelling Bee</button>
+
+          {/* Login Button */}
+          <button className="login-button">Login</button>
+        </div>
+      </div>
+
       {/* Render the Menu component based on isMenuOpen state */}
-      {isMenuOpen && <Menu />}
+      {isMenuOpen && <Menu/>}
     </div>
   );
 };
 
 export default Header;
-
