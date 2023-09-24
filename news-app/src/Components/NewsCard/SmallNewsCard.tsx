@@ -1,8 +1,9 @@
 // SmallNewsCard.tsx
 
-
+import React from 'react';
 import { NewsItem } from '../../APIs/Api';
 import './SmallNewsCard.css';
+import { Link } from 'react-router-dom'; // Import Link
 
 export interface Section2NewsCardProps {
   news: NewsItem;
@@ -14,9 +15,9 @@ function Section2NewsCard({ news }: Section2NewsCardProps) {
       {news.kicker && <p className="kicker">{news.kicker}</p>}
       <img src={news.multimedia[0]?.url} alt="News" loading="lazy" />
       <h2 className="title-small">
-        <a href={news.url} target="_blank" rel="noopener noreferrer">
+      <Link to={`/article/${news.uri}`} className="news-link">
           {news.title}
-        </a>
+        </Link>
       </h2>
     </div>
   );

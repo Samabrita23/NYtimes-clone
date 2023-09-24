@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { TopStoriesApi, NewsItem } from '../../APIs/Api';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './TopStories.css';
 import Section2NewsCard from '../NewsCard/SmallNewsCard';
 import formatDateAndTime from '../Common/DateTimeFunction';
+
 
 
 
@@ -11,23 +12,15 @@ function NewsCardLargeSmall({ news, isLarge }: { news: NewsItem; isLarge: boolea
 {
     // To use the formattedDate and formattedTime from formatDateAndTime
   const { formattedDate, formattedTime } = formatDateAndTime(news.published_date);
-  const navigate = useNavigate();
-
-  const handleCardClick = () => {
-    // Navigate to the ArticlePage and pass the selected news item as route parameters
-    navigate(`/${news.section}/${news.subsection}`, { state: { selectedNews: news } });
-  };
 
   return (
     <div className={`news-card ${isLarge ? 'news-card-large' : 'news-card-small'}`}>
       <img src={news.multimedia[0]?.url} alt="News" loading="lazy" />
       {isLarge && <p className="copyright">{news.multimedia[0]?.copyright}</p>}
       <h1 className="title">
-      <Link
-        to={`/${news.section}/${news.subsection}`} // Dynamic URL based on section and subsection
-        className={`news-card ${isLarge ? 'news-card-large' : 'news-card-small'}`}
-        onClick={handleCardClick}
-      ></Link>
+      <Link to={`/article/${news.uri}`} className="news-link">
+          {news.title}
+        </Link>
       </h1>
       <p className="abstract">{news.abstract}</p>
       <p className="published-byline">
@@ -43,9 +36,9 @@ function NewsCardColumn({ news }: { news: NewsItem }) {
   return (
     <div className="news-card news-card-column">
       <h1 className="title-column">
-        <a href={news.url} target="_blank" rel="noopener noreferrer">
+      <Link to={`/article/${news.uri}`} className="news-link">
           {news.title}
-        </a>
+        </Link>
       </h1>
       <div className="column-content">
         <div className="column-left">
@@ -60,7 +53,6 @@ function NewsCardColumn({ news }: { news: NewsItem }) {
           </p>
     </div>
   );
-
 }
 
 function TopStories() {

@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Navbar from './Components/NavBar/Navbar';
 import TopStories from './Components/TopStories/TopStories';
 import ArticlePage from './Components/ArticlePage/ArticlePage';
+import Country from './Components/Country/Country';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -21,7 +22,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/:section/:subsection" element={<ArticlePage />} />
+          <Route path="/article/:uri" element={<ArticlePage />} />
+          <Route path="/country/:country" element={<Country />} />
         </Routes>
       </div>
     </Router>
