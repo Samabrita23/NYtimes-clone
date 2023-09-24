@@ -1,0 +1,69 @@
+/* ArticlePage.css */
+.article-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .article-kicker {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .article-title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .article-abstract {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .article-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .article-button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .article-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .article-caption {
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  .article-copyright {
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  .article-byline {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  .article-paragraph {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .article-footer {
+    margin-top: 20px;
+    /* Add your styling for the footer here */
+  }
+  

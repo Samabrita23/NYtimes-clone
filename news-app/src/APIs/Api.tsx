@@ -2,11 +2,14 @@ import axios, { AxiosResponse } from 'axios';
 
 // Define the NewsItem interface
 export interface NewsItem {
+  section:string;
+  subsection:string;
   title: string;
   abstract: string;
   byline: string;
   url: string;
   uri: string;
+  kicker: string;
   multimedia: {
     url: string;
     format: string;
@@ -31,11 +34,11 @@ export const TopStoriesApi = async (): Promise<NewsItem[]> => {
       // Make a GET request to the API
       const response: AxiosResponse = await axios.get(BASE_URL, {
         params: {
-          'api-key': API_KEY, // Correct the parameter name
+          'api-key': API_KEY, 
         },
       });
   
-      // Extract the news items from the API response
+      // To extract the news items from the API response
       const newsItems: NewsItem[] = response.data.results;
   
       return newsItems;
@@ -45,6 +48,7 @@ export const TopStoriesApi = async (): Promise<NewsItem[]> => {
     }
   };
   
+
 
   
   

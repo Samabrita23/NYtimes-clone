@@ -29,6 +29,7 @@
     justify-content: left;
     gap: 7px;
     font-size: 11px;
+    word-spacing: -0.02em;
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -37,7 +38,7 @@
     text-decoration: none;
     color: #333;
     padding: 5px;
-    border-right: 1.4px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
     transition: text-decoration 0.3s ease;
   }
   

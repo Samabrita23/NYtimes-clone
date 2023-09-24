@@ -1,0 +1,33 @@
+/* SmallNewsCard.css */
+
+.section2-card {
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    font-family: georgia, 'times new roman', times, serif;
+  }
+  .section2-card:last-child{
+    border-right: none;
+  }
+  .section2-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .title-small {
+    padding-top: 9px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .kicker {
+    font-weight: 100;
+    color: hsla(0, 0%, 21.18%, 1);
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
