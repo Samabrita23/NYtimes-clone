@@ -22,7 +22,9 @@
     font-size: 14px;
     font-weight: 600;
   }
-  
+  .title-small a:hover{
+    text-decoration: underline;
+  }
   .kicker {
     font-weight: 100;
     color: hsla(0, 0%, 21.18%, 1);

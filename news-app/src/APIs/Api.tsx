@@ -31,7 +31,7 @@ const API_KEY = 'WPwM26BddVXymZHhqmokGFIc7cxItNq3';
 // Defining the TopStoriesApi function
 export const TopStoriesApi = async (): Promise<NewsItem[]> => {
     try {
-      // Make a GET request to the API
+      // Making a GET request to the API
       const response: AxiosResponse = await axios.get(BASE_URL, {
         params: {
           'api-key': API_KEY, 
@@ -50,6 +50,6 @@ export const TopStoriesApi = async (): Promise<NewsItem[]> => {
   
 
 
-  
+
   
   

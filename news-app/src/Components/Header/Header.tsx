@@ -7,15 +7,14 @@ import "./Header.css"; // Import the CSS file
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // To handle side menu
+  // Toggle the side menu
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
-  
 
+  // Handle search click
   const handleSearchClick = () => {
-    // To handle search
+    // To implement search functionality here
   };
 
   return (
@@ -28,7 +27,8 @@ const Header: React.FC = () => {
           {/* Hamburger Icon */}
           <FaBars
             className="hamburger-icon"
-            onClick = {handleMenuClick}
+            onClick={handleMenuClick}
+            aria-label="Menu"
           />
 
           {/* Search Icon */}
@@ -38,6 +38,7 @@ const Header: React.FC = () => {
               e.preventDefault();
               handleSearchClick();
             }}
+            aria-label="Search"
           />
 
           {/* Clickable word "World News" */}
@@ -51,10 +52,10 @@ const Header: React.FC = () => {
           <a href="/" className="text-black">
             <img
               src={NewYorkTimes}
-              alt="The New York Times"
+              alt="The New York Times Logo"
               width="250px"
               onClick={() => {
-                // Handle logo click action here
+                // To Handle logo click action here
               }}
             />
           </a>
@@ -71,7 +72,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Render the Menu component based on isMenuOpen state */}
-      {isMenuOpen && <Menu/>}
+      {isMenuOpen && <Menu />}
     </div>
   );
 };

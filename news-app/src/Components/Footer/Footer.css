@@ -1,0 +1,147 @@
+/* Footer.css */
+
+.footer {
+    background-color: white;
+    padding: 50px 0;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    
+  }
+
+  .footer-wrapper img {
+    padding-bottom: 2rem;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: text-decoration 0.2s;
+  }
+  
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-subscribe {
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+    width: 100%;
+  }
+  
+  .footer-subscribe a {
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer-subscribe ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .footer-subscribe ul li {
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: black;
+  }
+  
+  .list-divider-1{
+    border-bottom: 1px solid #ddd;
+  }
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10px;
+    gap:8px;
+    color: #777;
+  }
+  
+  /* Media Queries */
+@media (max-width: 1024px) {
+    .footer-row {
+      flex-direction: row;
+    }
+  
+    .footer-column {
+      flex: 1;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-subscribe a {
+      margin-bottom: 10px;
+    }
+    
+    .footer-subscribe ul li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer h3 {
+      font-size: 16px;
+    }
+  
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+  
+    .footer-subscribe a {
+      margin-bottom: 8px;
+    }
+  
+    .footer-subscribe ul li {
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      text-align: left;
+      font-size: 14px;
+    }
+  }

@@ -4,6 +4,7 @@ import Navbar from './Components/NavBar/Navbar';
 import TopStories from './Components/TopStories/TopStories';
 import ArticlePage from './Components/ArticlePage/ArticlePage';
 import Country from './Components/Country/Country';
+import Footer from './Components/Footer/Footer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -13,6 +14,7 @@ function HomePage() {
       <Header />
       <Navbar />
       <TopStories/>
+      <Footer/>
     </div>
   );
 }
