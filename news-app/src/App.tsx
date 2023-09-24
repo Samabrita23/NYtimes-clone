@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header/Header';
+import Navbar from './Components/NavBar/Navbar';
+import TopStories from './Components/TopStories/TopStories';
+import ArticlePage from './Components/ArticlePage/ArticlePage';
+import Country from './Components/Country/Country';
+import Footer from './Components/Footer/Footer';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+
+function HomePage() {
+  return (
+    <div className="home-page">
+      <Header />
+      <Navbar />
+      <TopStories/>
+      <Footer/>
+    </div>
+  );
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/article/:uri" element={<ArticlePage />} />
+          <Route path="/country/:country" element={<Country />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

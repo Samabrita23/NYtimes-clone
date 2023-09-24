@@ -1,0 +1,159 @@
+/* Header container */
+.header-container {
+    background-color: white;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 10px 0;
+    font-family:helvetica,arial,sans-serif;
+  }
+
+  .header-wrapper {
+    margin-left:8rem;
+    margin-right: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+ 
+  /* Left section */
+  .left-section {
+    display: flex;
+    flex: 1.5;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger-icon {
+    color: #333;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+  
+  .hamburger-icon:hover {
+    color: #000;
+  }
+  
+  /* Search Icon */
+  .search-icon {
+    color: #333;
+    cursor: pointer;
+    margin-right: 3rem;
+  }
+  
+  .search-icon:hover {
+    color: #000;
+  }
+  
+  /* Clickable word "World News" */
+  .world-news {
+    color: #333;
+    cursor: pointer;
+    font-size:"14.25px";
+    font-weight: 700;
+  }
+  
+  .world-news:hover {
+    color: #000;
+  }
+  
+  /* Center section (Logo) */
+  .logo {
+    flex: 2;
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 250px;
+    cursor: pointer;
+  }
+  
+  /* Right section */
+  .right-section {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-family:helvetica,arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+
+  }
+  
+  /* Play Spelling Bee Button */
+  .play-button {
+    background-color: rgb(86, 123, 149);
+    border: 1px solid rgb(50, 104, 145);
+    border-radius: 3px;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #326891;
+  }
+  
+  /* Login Button */
+  .login-button {
+    background-color: rgb(86, 123, 149);
+    border: 1px solid rgb(50, 104, 145);
+    border-radius: 3px;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #326891;
+  }
+
+/* Media Queries for Responsiveness */
+
+/* For screens with a maximum width of 1024px */
+@media (max-width: 1024px) {
+    .header-wrapper {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+  
+  /* For screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    .header-wrapper {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .search-icon {
+      margin-right: 2rem;
+    }
+
+    .logo img {
+        width: 150px;
+      }
+
+  .play-button,
+  .login-button {
+    padding: 6px 12px; 
+  }
+  }
+
+  @media (max-width: 480px) {
+    .header-wrapper {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .logo img {
+      width: 100px;
+    }
+
+    .play-button,
+  .login-button {
+    padding: 4px 8px; 
+  }
+  }
